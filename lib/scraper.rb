@@ -22,6 +22,9 @@ class Scraper
 
 
       links = doc.css(".social-icon-container a").collect{|line| line.attr('href')}
+      profile_index_array= {
+      :profile_quote =>doc.css(".profile_quote").text,
+      :bio =>doc.css(".description-holder p").text}
       links.each do |link|
             case
             when link.include?("twitter")
@@ -33,11 +36,7 @@ class Scraper
             else
               profile_index_array[:blog] = link
             end
-      end # all links end
-
-      profile_index_array= {
-      :profile_quote =>doc.css(".profile_quote").text,
-      :bio =>doc.css(".description-holder p").text}
+      end # all links en
 
     profile_index_array
     binding.pry
