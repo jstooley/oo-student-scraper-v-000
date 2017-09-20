@@ -35,7 +35,7 @@ class Scraper
               profile_index_array[:blog] = link
             end
       end # all links end
-      
+
       profile_index_array= {
       :profile_quote =>post.css(".profile_quote").text,
       :bio =>post.css(".description-holder p").text}
