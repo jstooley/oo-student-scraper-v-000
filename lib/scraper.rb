@@ -36,8 +36,8 @@ class Scraper
       end # all links end
       binding.pry
       profile_index_array= {
-      :profile_quote =>post.css(".profile_quote").text,
-      :bio =>post.css(".description-holder p").text}
+      :profile_quote =>doc.css(".profile_quote").text,
+      :bio =>doc.css(".description-holder p").text}
 
     profile_index_array
 
