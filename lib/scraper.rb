@@ -23,7 +23,7 @@ class Scraper
 
       links = doc.css(".social-icon-container a").collect{|line| line.attr('href')}
       profile_index_array= {
-      :profile_quote =>doc.css(".profile_quote").text,
+      :profile_quote =>doc.css(".profile-quote").text,
       :bio =>doc.css(".description-holder p").text}
       links.each do |link|
             case
