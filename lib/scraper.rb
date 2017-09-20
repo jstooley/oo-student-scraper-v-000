@@ -21,7 +21,7 @@ class Scraper
     doc = Nokogiri::HTML (open(index_url))
 
 
-      links = post.css(".social-icon-container a").collect{|line| line.attr('href')}
+      links = doc.css(".social-icon-container a").collect{|line| line.attr('href')}
       links.each do |link|
          when link.include?("twitter")
              profile_index_array[:twitter] = link
