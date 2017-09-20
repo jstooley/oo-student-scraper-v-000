@@ -14,7 +14,7 @@ class Student
   def self.create_from_collection(students_array)
     students_array.each do |student|
       binding.pry
-      Student.new(Scraper.scrape_index_page(student))
+      Student.new(student)
     end
 
   end
