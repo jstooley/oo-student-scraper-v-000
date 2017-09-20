@@ -17,9 +17,9 @@ class Scraper
 
   def self.scrape_profile_page(profile_url)
     profile_index_array = []
-    
+
     doc = Nokogiri::HTML (open(index_url))
-  
+
 
       links = post.css(".social-icon-container a").collect{|line| line.attr('href')}
       links.each do |link|
@@ -33,7 +33,7 @@ class Scraper
               profile_index_array[:blog] = link
         end
       end # all links end
-      profile_index_array[i]= {
+      profile_index_array= {
       :profile_quote =>post.css(".profile_quote").text,
       :bio =>post.css(".description-holder p").text}
     end
