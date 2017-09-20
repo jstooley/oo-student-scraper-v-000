@@ -32,7 +32,7 @@ class Scraper
               profile_index_array[:github] = link
             else
               profile_index_array[:blog] = link
-            end
+          
       end # all links end
       binding.pry
       profile_index_array= {
