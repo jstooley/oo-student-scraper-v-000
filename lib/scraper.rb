@@ -23,7 +23,7 @@ class Scraper
 
       links = doc.css(".social-icon-container a").collect{|line| line.attr('href')}
       profile_index[:profile_quote] = doc.css(".profile-quote").text
-      profile_index[:bio] = doc.css(".description-holder p").text}
+      profile_index[:bio] = doc.css(".description-holder p").text
       links.each do |link|
             case
             when link.include?("twitter")
