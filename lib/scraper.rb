@@ -18,7 +18,7 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     profile_index_array = []
 
-    doc = Nokogiri::HTML (open(index_url))
+    doc = Nokogiri::HTML (open(profile_url_url))
 
 
       links = doc.css(".social-icon-container a").collect{|line| line.attr('href')}
