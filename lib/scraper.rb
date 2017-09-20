@@ -24,7 +24,6 @@ class Scraper
       links = doc.css(".social-icon-container a").collect{|line| line.attr('href')}
       links.each do |link|
             case
-              binding.pry
             when link.include?("twitter")
               profile_index_array[:twitter] = link
             when link.include?("linkedin")
