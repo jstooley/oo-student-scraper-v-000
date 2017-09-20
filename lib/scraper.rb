@@ -37,7 +37,7 @@ class Scraper
               profile_index[:blog] = link
             end
       end # all links end
-binding.pry
+
     profile_index
 
 
