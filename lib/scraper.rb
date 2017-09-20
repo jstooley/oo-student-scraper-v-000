@@ -39,8 +39,8 @@ class Scraper
       end # all links end
 
     profile_index_array
-    
 
+binding.pry
   end
 
 end
