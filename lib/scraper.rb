@@ -36,7 +36,7 @@ class Scraper
       profile_index_array= {
       :profile_quote =>post.css(".profile_quote").text,
       :bio =>post.css(".description-holder p").text}
-    end
+    
     profile_index_array
     binding.pry
   end
