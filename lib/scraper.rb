@@ -16,25 +16,25 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
-    profile_index_array = {}
+    profile_index = {}
 
     doc = Nokogiri::HTML (open(profile_url))
 
 
       links = doc.css(".social-icon-container a").collect{|line| line.attr('href')}
-      profile_index_array= {
+      profilw_index= {
       :profile_quote =>doc.css(".profile-quote").text,
       :bio =>doc.css(".description-holder p").text}
       links.each do |link|
             case
             when link.include?("twitter")
-              profile_index_array[:twitter] = link
+              profile_index[:twitter] = link
             when link.include?("linkedin")
-              profile_index_array[:linkedin] = link
+              profile_index[:linkedin] = link
             when link.include?("github")
-              profile_index_array[:github] = link
+              profile_index[:github] = link
             else
-              profile_index_array[:blog] = link
+              profile_index[:blog] = link
             end
       end # all links end
 binding.pry
