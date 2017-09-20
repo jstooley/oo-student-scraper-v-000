@@ -34,7 +34,7 @@ class Scraper
               profile_index_array[:blog] = link
             end
       end # all links end
-      binding.pry
+      
       profile_index_array= {
       :profile_quote =>doc.css(".profile_quote").text,
       :bio =>doc.css(".description-holder p").text}
