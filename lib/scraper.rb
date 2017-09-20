@@ -36,7 +36,7 @@ class Scraper
             else
               profile_index_array[:blog] = link
             end
-      end # all links en
+      end # all links end
 
     profile_index_array
     binding.pry
