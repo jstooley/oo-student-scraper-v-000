@@ -19,5 +19,9 @@ class Student
   def self.all
     
   end
+
+  def new(hash)
+    self.name = hash.name 
+  end
 end
 
